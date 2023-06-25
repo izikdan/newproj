@@ -22,8 +22,7 @@ import newcomp from './components/newcomp.vue';
 <template>
   <header>
     <div>
-         <newcomp msg="hello you her?"/>
-    
+         <newcomp msg="hello you her? where are you?"/>
          <!-- <div>
       <component
         v-for="(componentData, index) in componentsData"
