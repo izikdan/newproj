@@ -1,49 +1,18 @@
 <script setup>
-import { ref } from 'vue';
+import { ref } from '@vue/reactivity';
 
 import newcomp from './components/newcomp.vue';
-// import NewComponent from './components/NewComponent.vue';
 
-// let componentsData = ref([]);
-
-// const addNewComponent = () => {
-//   const componentName = 'NewComponent'; // שם הקומפוננטה החדשה
-//   const msg = 'Hello World'; // הודעת הקומפוננטה החדשה
-//   const componentData = {
-//     component: componentName,
-//     msg: msg,
-//   };
-//   componentsData.value.push(componentData);
-// }
-// import HelloWorld from './components/HelloWorld.vue'
-// import TheWelcome from './components/TheWelcome.vue'
 </script>
 
 <template>
   <header>
     <div>
          <newcomp msg="hello you her? where are you? where are you go?"/>
-         <!-- <div>
-      <component
-        v-for="(componentData, index) in componentsData"
-        :key="index"
-        :is="componentData.component"
-        :msg="componentData.msg"
-      ></component>
-    </div>
-    <button @click="addNewComponent">הוסף קומפוננטה חדשה</button> -->
-
-    <!-- <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="10" height="10" /> -->
-</div>
-    <!-- <div class="wrapper">
-      <HelloWorld msg="hello world" />
-    </div> -->
-    
+        
+</div>    
   </header>
 
-  <!-- <main>
-    <TheWelcome />
-  </main> -->
 </template>
 
 <style scoped>
