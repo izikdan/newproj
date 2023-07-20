@@ -1,6 +1,7 @@
 
 
 <template>
+  <div v-if="!details">
   <div class="greetings">
      <h1 class="green">{{ msg }}</h1>
     <!-- <h1>{{ user }}</h1> -->
@@ -17,17 +18,18 @@
       <input type="text" v-model="name">שם
       <button @click="toggleCalendar3">סיים</button>
     </div>
-    <div v-if="users.length > 0">
+    <div v-if="users.length > 0" >
       <h1 >פגישות שמורות</h1>
       <ul>
         <li v-for="(user, index) in users" :key="index" @click="">
-          <a @click="toggleCalendar4">תאריך: {{ user.selectedDate }} :שם: {{ user.name }}</a>
+          <a @click="$emit('toggleTow')">תאריך: {{ user.selectedDate }} :שם: {{ user.name }}</a>
         </li>
       </ul>
     </div>
-    <div v-if= "details">
+    <!-- <div v-if= "details">
       <textarea name="addDetails" id="addDetails" cols="30" rows="10">       פרטים נוספים</textarea>
-    </div>
+    </div> -->
+  </div>
   </div>
 </template>
 
@@ -60,6 +62,7 @@ const toggleCalendar3 = () => {
 }
 const toggleCalendar4 =()=>{
   details.value=!details.value;
+    // this.$emit('toggleTow');
 }
 defineProps({
   msg: {

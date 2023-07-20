@@ -2,15 +2,20 @@
 import { ref } from '@vue/reactivity';
 
 import newcomp from './components/newcomp.vue';
+import HelloWorld from './components/HelloWorld.vue'
+let level2 = ref(false) 
+const nextLevel =()=>{
+  level2.value=!level2.value;
+}
 
 </script>
 
 <template>
   <header>
-    <div>
-         <newcomp msg="hello you her? where are you? where are you go?"/>
-        
-</div>    
+     <div>
+         <newcomp @toggleTow="nextLevel" v-show="!level2"/>
+         <HelloWorld @back="nextLevel" v-show="level2"/>
+</div>      
   </header>
 
 </template>
